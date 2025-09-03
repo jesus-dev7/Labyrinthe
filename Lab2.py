@@ -149,10 +149,10 @@ print(PathFinder())
 def Interface():
     
     root = tk.Tk()
-    root.geometry('800x600')
-    root.title('Canvas Demo - Rectangle')
+    root.geometry('800x800')
+    root.title('Labyrinthe')
 
-    canvas = tk.Canvas(root, width=600, height=400, bg='white')
+    canvas = tk.Canvas(root, width=800, height=800, bg='white')
     canvas.grid(column=0, row=0)
     
     class Cubes:
@@ -161,7 +161,7 @@ def Interface():
             self.j = int(j)
             self.color = color
         def Creer(self):
-            canvas.create_rectangle(((self.k)*10, (self.j)*10), ((self.k+20)*10, (self.j+20)*10), fill=color)
+            canvas.create_rectangle(((self.k)*20, (self.j)*20), ((self.k+20)*20, (self.j+20)*20), fill=color)
             
     for j in range(len(lab)):
         for k in range(len(lab[j])):
